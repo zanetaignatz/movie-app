@@ -42,7 +42,6 @@
     border-radius: 10px;
 }
 .info-container{
-<<<<<<< HEAD
     padding: auto;
 }
 
@@ -78,7 +77,6 @@
 .mdb-autocomplete-items div:hover {
   
     background-color: #01d277;
-=======
     padding: 10px;
 }
 .meta-data-container{
@@ -118,5 +116,4 @@ p{
 }
 .additional-details{
     margin: 15px 0 15px 0;
->>>>>>> 0419932c36e6312c57c2739fe03689168788a8aa
 }

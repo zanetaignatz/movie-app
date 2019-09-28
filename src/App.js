@@ -7,21 +7,9 @@ class App extends Component {
   render() {
     return (
       <div className="App container-fluid" >
-<<<<<<< HEAD
        {/* SEARCHBAR */} 
         <SearchBar/>
 
-=======
-        <div className="App-header row container-fluid">
-          <div className="logo-container col-6 row"> 
-            <img src={tmdbLogo} className="logo col-6" alt="TMDB logo" height="50"/>
-            <h1 className="App-title col-4">MovieApp</h1>
-          </div>
-          <div className="input-container col-6">
-            
-          </div>
-        </div>
->>>>>>> 0419932c36e6312c57c2739fe03689168788a8aa
         <div className ="MovieCard col-12 col-md-12">
 
           <div className="meta-data-container row col-12 col-md-10 col-lg-9">
