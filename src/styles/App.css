@@ -1,5 +1,6 @@
 .App{
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 .App-header{
@@ -12,9 +13,10 @@
 
 .logo-container{
     margin: auto;
-    padding: 15px 0 15px 30px;
+    padding: 15px 0 15px 0;
     text-align: end;
 }
+
 .App-title{
     padding-left: 15px;
 }
@@ -23,22 +25,8 @@
     padding: 120px 0 120px 0;
     text-align: center;
     background: url('https://image.tmdb.org/t/p/original/jrudoaXcoLyHRPdolyOGemXgPEs.jpg');
-    background-size: 100%;
-}
-
-.meta-data-container{
-    margin: auto;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    border-radius: 10px;
-    color: white;
-}
-h2{
-    padding: 30px 0 10px 0;
-}
-
-.release-details{
-    margin:0;
+    background-size: cover;
+    background-position: center center;
 }
 
 .poster{
@@ -54,6 +42,7 @@ h2{
     border-radius: 10px;
 }
 .info-container{
+<<<<<<< HEAD
     padding: auto;
 }
 
@@ -89,4 +78,45 @@ h2{
 .mdb-autocomplete-items div:hover {
   
     background-color: #01d277;
+=======
+    padding: 10px;
+}
+.meta-data-container{
+    margin: auto;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    color: white;
+}
+
+/* text edition */
+.tagline{
+    display: block;
+    color: #01d277;
+    font-size: 1.2rem;
+}
+.genre-list{
+    padding: 10px;
+    display: block;
+    color: #01d277;
+    font-size: 1.2rem;
+}
+.meta-data{
+    display: block;
+    color: #01d277;
+    font-size: 1.2rem;
+}
+h2{
+    padding: 30px 0 10px 0;
+}
+p{
+    margin: 0;
+    padding: 15px 0 0 0;
+}
+.release-details{
+    margin:0;
+}
+.additional-details{
+    margin: 15px 0 15px 0;
+>>>>>>> 0419932c36e6312c57c2739fe03689168788a8aa
 }
