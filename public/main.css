@@ -1,0 +1,9 @@
+footer{
+    background-color: black;
+    height: 50px;
+    text-align: center;
+}
+#repo-link{
+    color: #01d277;
+    font-size: 0.7rem;
+}
