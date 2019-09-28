@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 import tmdbLogo from './PoweredBy.svg';
+import SearchBar from './SearchBar';
 
 class App extends Component {
   render() {
     return (
       <div className="App container-fluid" >
-        <div className="App-header row container-fluid">
-          <div className="logo-container col-6 col-md- row"> 
-            <img src={tmdbLogo} className="logo col-6 col-md- " alt="TMDB logo" height="50"/>
-            <h1 className="App-title col-4 col-md- ">MovieApp</h1>
-          </div>
-          <div className="input-container col-6 col-md- ">
-            
-          </div>
-        </div>
+       {/* SEARCHBAR */} 
+        <SearchBar/>
+
         <div className ="MovieCard col-12 col-md-12">
 
           <div className="meta-data-container row col-12 col-md-8 col-lg-7">
@@ -45,3 +40,4 @@ class App extends Component {
   }
 }
 export default App;
+

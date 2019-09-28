@@ -56,3 +56,37 @@ h2{
 .info-container{
     padding: auto;
 }
+
+
+.active-green-3 input[type=text] {
+    border: 1px solid #01d277;
+    box-shadow: 0 0 0 1px #01d277;
+    background-color:black;
+    color:white;
+    }
+    
+.active-green-4 input[type=text]:focus:not([readonly]) {
+        border: 1px solid #01d277;
+        box-shadow: 0 0 0 1px #01d277;
+        background-color:black;
+        color:white;
+        }
+
+#form-autocomplete {
+
+}
+
+.mdb-autocomplete {
+    position: relative;
+}
+
+.mdb-autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+    border-bottom: 1px solid #01d277;
+  }
+.mdb-autocomplete-items div:hover {
+  
+    background-color: #01d277;
+}
