@@ -1,0 +1,58 @@
+.App{
+    padding: 0;
+}
+
+.App-header{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.logo-container{
+    margin: auto;
+    padding: 15px 0 15px 30px;
+    text-align: end;
+}
+.App-title{
+    padding-left: 15px;
+}
+
+.MovieCard{
+    padding: 120px 0 120px 0;
+    text-align: center;
+    background: url('https://image.tmdb.org/t/p/original/jrudoaXcoLyHRPdolyOGemXgPEs.jpg');
+    background-size: 100%;
+}
+
+.meta-data-container{
+    margin: auto;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    color: white;
+}
+h2{
+    padding: 30px 0 10px 0;
+}
+
+.release-details{
+    margin:0;
+}
+
+.poster{
+    width:auto;
+    height:350px;
+}
+.poster-container{
+    margin: auto;
+}
+.poster-container .poster{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.info-container{
+    padding: auto;
+}
