@@ -60,24 +60,22 @@
         color:white;
         }
 
-#form-autocomplete {
 
-}
-
-.mdb-autocomplete {
-    position: relative;
-}
-
-.mdb-autocomplete-items div {
-    padding: 10px;
+.dropdown-menu {
+    padding-top: 5px;
     cursor: pointer;
     background-color: black;
-    border-bottom: 1px solid #01d277;
+    border-bottom: 2px solid #01d277;
+    color: white;
+    opacity: 0.85;
+    width:92%;
   }
-.mdb-autocomplete-items div:hover {
-  
-    background-color: #01d277;
-    padding: 10px;
+
+.dropdown-item {
+    color: white;
+}
+.dropdown-item:hover {
+    background-color: #FFFCF9;
 }
 .meta-data-container{
     margin: auto;
