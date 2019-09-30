@@ -1,9 +1,9 @@
 footer{
-    background-color: black;
     height: 50px;
+    background: url("../src/styles/gplaypattern.png");
     text-align: center;
 }
 #repo-link{
-    color: #01d277;
+    color: #0b417a;
     font-size: 0.7rem;
 }
