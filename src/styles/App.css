@@ -1,0 +1,123 @@
+.App{
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.App-header{
+    margin: 0;
+    padding: 0;
+    background-image: url('gplaypattern.png');
+    color: #0b417a;
+    text-align: center;
+}
+
+.logo-container{
+    margin: auto;
+    padding: 15px 0 15px 0;
+    text-align: end;
+    font-family: 'Leckerli One', cursive;
+}
+
+.App-title{
+    padding-left: 15px;
+}
+
+.MovieCard{
+    padding: 120px 0 120px 0;
+    text-align: center;
+    background: url('https://image.tmdb.org/t/p/original/jrudoaXcoLyHRPdolyOGemXgPEs.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.poster{
+    width:auto;
+    height:350px;
+}
+.poster-container{
+    margin: auto;
+}
+.poster-container .poster{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.info-container{
+    padding: auto;
+}
+
+
+.active-green-3 input[type=text] {
+    border: 1px solid #0b417a;
+    box-shadow: 0 0 0 1px #0b417a;
+    background-color: white;
+    color:#0b417a;
+    }
+    
+.active-green-4 input[type=text]:focus:not([readonly]) {
+        border: 1px solid #0b417a;
+        box-shadow: 0 0 0 1px #0b417a;
+        background-color: white;
+        color:#0b417a;
+        }
+
+
+.dropdown-menu {
+    padding-top: 5px;
+    cursor: pointer;
+    background-color: white;
+    border-bottom: 2px solid #0b417a;
+    color: #0b417a;
+    /*opacity: 0.85;*/
+    width:92%;
+  }
+
+.dropdown-item {
+    color: #0b417a;
+}
+.dropdown-item:hover {
+    background-color: rgb(224, 223, 223);
+}
+.meta-data-container{
+    margin: auto;
+    padding: 0;
+    background-color: rgba(107, 107, 107, 0.9);
+    border-radius: 10px;
+    color: white;
+}
+
+/* text edition */
+.tagline{
+    display: block;
+    color: #0b417a;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.genre-list{
+    padding: 10px;
+    display: block;
+    color: #0b417a;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.meta-data{
+    display: block;
+    color: #0b417a;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+h2{
+    padding: 30px 0 10px 0;
+    font-size: 45px;
+    font-weight: bold;
+}
+p{
+    margin: 0;
+    padding: 15px 0 0 0;
+}
+.release-details{
+    margin:0;
+}
+.additional-details{
+    margin: 15px 0 15px 0;
+}
