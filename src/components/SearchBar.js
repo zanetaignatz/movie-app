@@ -1,6 +1,7 @@
 import React from 'react';
 import tmdbLogo from '../powered-by-blue.svg';
 import MovieAPI from '../handlers/api';
+import Suggestions from './Suggestions'
 
 class SearchBar extends React.Component {
 
@@ -8,21 +9,41 @@ class SearchBar extends React.Component {
         super(props)
         this.api = new MovieAPI();
         this.state = {
-            value: ''
+            value: '',
+            movies: [] 
         };
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(e){
-    }
+        this.setState({
+          value: e.target.value
+        }, () => {
+          if (this.state.value && this.state.value.length > 1) {
+            if (this.state.value.length % 2 === 0) {
+              this.loadMovies(this.state.value)
+            }
+          } 
+        })
+      }
     
-    async loadMovies() {
-        let movies = await this.api.searchMovies(this.state.value);
-        this.state.movies = movies;
+    async loadMovies(query) {
+        let loadedMovies = await this.api.searchMovies(query);
+        this.setState(
+            {
+                movies : loadedMovies
+            }
+        );
     }
 
     componentDidMount() {
         this.loadMovies();
+    }
+
+    suggestionSelected=(value)=>{
+        this.setState({
+            value
+          });
     }
 
     render () {
@@ -47,9 +68,8 @@ class SearchBar extends React.Component {
 
                     />
                     <div className="dropdown-menu" aria-labelledby="dropdownMenuInput">
-                        <a className="dropdown-item" href="#">Forrest Gump</a>
-                        <a className="dropdown-item" href="#">Ojciec Chrzestny</a>
-                        <a className="dropdown-item" href="#">Pulp Fiction</a>
+                        <Suggestions movies={this.state.movies} suggestionselected={this.suggestionSelected}/>
+                        
                     </div>
                 </div>
                 </div>
