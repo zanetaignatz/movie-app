@@ -7,3 +7,13 @@ footer{
     color: #0b417a;
     font-size: 0.7rem;
 }
+
+.scrollable-dropdown {
+    height: auto;
+    max-height: 200px;
+    overflow-y: scroll;
+    transform: none !important;
+    top: 38px !important;  
+    left: 15px !important;
+}
+

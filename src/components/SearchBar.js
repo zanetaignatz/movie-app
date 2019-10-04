@@ -67,7 +67,7 @@ class SearchBar extends React.Component {
                     onChange={this.handleChange}
 
                     />
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuInput">
+                    <div className="dropdown-menu scrollable-dropdown" aria-labelledby="dropdownMenuInput">
                         <Suggestions movies={this.state.movies} suggestionselected={this.suggestionSelected}/>
                         
                     </div>
