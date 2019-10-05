@@ -8,24 +8,47 @@ class SearchBar extends React.Component {
         super(props)
         this.api = new MovieAPI();
         this.state = {
-            value: ''
+            value: '',
+            movies: []
         };
+        //this.movies = [];
         this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange(e){
+        this.setState({
+            value: this.search.value,
+          },callback => {
+            this.loadMovies(this.state.value);
+          });
+          
     }
     
-    async loadMovies() {
-        let movies = await this.api.searchMovies(this.state.value);
-        this.state.movies = movies;
+    async loadMovies(query) {
+        let loadedMovies = await this.api.searchMovies(query);
+
+        this.setState(
+            {
+                movies : loadedMovies ? loadedMovies : []
+            }
+        );
+        
+        //this.state.movies = movies;
     }
 
     componentDidMount() {
-        this.loadMovies();
+        //this.loadMovies();
+    }
+
+    componentDidUpdate(){
+        
     }
 
     render () {
+        
+        const gotMovies = this.state.movies.length > 0;
+
+            
         var imgStyle = {
             height: '50px'
         }
@@ -42,15 +65,20 @@ class SearchBar extends React.Component {
                     <input id="dropdownMenuInput" className="form-control dropdown-toggle" type="text"
                     placeholder="Search..." aria-label="Search" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="true"
-                    value={this.state.value} 
+                    value={this.state.value}
+                    ref={input => this.search = input} 
                     onChange={this.handleChange}
 
                     />
-                    <div className="dropdown-menu" aria-labelledby="dropdownMenuInput">
-                        <a className="dropdown-item" href="#">Forrest Gump</a>
-                        <a className="dropdown-item" href="#">Ojciec Chrzestny</a>
-                        <a className="dropdown-item" href="#">Pulp Fiction</a>
+                   
+                    <div className="dropdown-menu"
+                    aria-labelledby="dropdownMenuInput">
+                        {this.state.movies.map(movie => {
+                                return (<a className="dropdown-item" href="#">{movie.title}</a>)
+                            })
+                        }
                     </div>
+                   
                 </div>
                 </div>
 
