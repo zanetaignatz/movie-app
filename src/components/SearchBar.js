@@ -9,7 +9,8 @@ class SearchBar extends React.Component {
         this.api = new MovieAPI();
         this.state = {
             value: '',
-            movies: []
+            movies: [],
+            dropdownStyle: "dropdown-menu hidden"
         };
         //this.movies = [];
         this.handleChange = this.handleChange.bind(this);
@@ -29,7 +30,8 @@ class SearchBar extends React.Component {
 
         this.setState(
             {
-                movies : loadedMovies ? loadedMovies : []
+                movies : loadedMovies ? loadedMovies : [],
+                dropdownStyle : (loadedMovies && loadedMovies.length>0) ?"dropdown-menu visible show" : "dropdown-menu hidden"
             }
         );
         
@@ -53,7 +55,7 @@ class SearchBar extends React.Component {
             height: '50px'
         }
 
-        return (
+        let content = (
             <div className="App-header row container-fluid align-items-center"> 
                 <div className="logo-container col-12 col-sm-6 col-md-7 col-lg-6 row px-0 px-md-auto">
                     <img src={tmdbLogo} className="logo col-3 col-sm-3 col-md-6 mx-auto mx-sm-0" alt="TMDB logo"
@@ -71,13 +73,13 @@ class SearchBar extends React.Component {
 
                     />
                    
-                    <div className="dropdown-menu"
+                     <div className={this.state.dropdownStyle}
                     aria-labelledby="dropdownMenuInput">
                         {this.state.movies.map(movie => {
                                 return (<a className="dropdown-item" href="#">{movie.title}</a>)
                             })
                         }
-                    </div>
+                    </div> 
                    
                 </div>
                 </div>
@@ -85,7 +87,8 @@ class SearchBar extends React.Component {
             </div>
      
              );  
-          
+           
+          return content;
         }
 }
 

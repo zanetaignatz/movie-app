@@ -63,14 +63,21 @@
 
 
 .dropdown-menu {
-    padding-top: 5px;
+    /* padding-top: 5px; */
     cursor: pointer;
     background-color: white;
-    border-bottom: 2px solid #0b417a;
+    /* border-bottom: 2px solid #0b417a; */
     color: #0b417a;
     /*opacity: 0.85;*/
     width:92%;
   }
+
+.hidden{
+    opacity: 0;
+}
+.visible{
+    opacity: 1;
+}
 
 .dropdown-item {
     color: #0b417a;
