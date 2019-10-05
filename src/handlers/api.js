@@ -11,6 +11,8 @@ export default class MovieAPI {
         await axios.get(`${this.baseURL}search/movie?api_key=${this.apiKey}&query=${query}`)
             .then(res => {
                 result = res.data.results;
+            }).catch(error => {
+                console.log('error searching movies');
             });
         return result;
     }
