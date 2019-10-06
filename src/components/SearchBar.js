@@ -1,6 +1,7 @@
 import React from 'react';
 import tmdbLogo from '../powered-by-blue.svg';
 import MovieAPI from '../handlers/api';
+import Description from './Description';
 
 class SearchBar extends React.Component {
 
@@ -38,6 +39,9 @@ class SearchBar extends React.Component {
         );
         // MG //
         console.log(loadedMovies);
+        console.log(loadedMovies[0].title);
+        console.log(this.state.movies);
+
         //this.state.movies = movies;
     }
 
@@ -57,7 +61,7 @@ class SearchBar extends React.Component {
 
     render () {
         
-        const gotMovies = this.state.movies.length > 0;
+        //const gotMovies = this.state.movies.length > 0;
 
             
         var imgStyle = {
@@ -85,16 +89,14 @@ class SearchBar extends React.Component {
                         <div className={this.state.dropdownStyle}
                         aria-labelledby="dropdownMenuInput">
                             {this.state.movies.map(movie => {
-                                    return (<a className="dropdown-item" href="#">{movie.title}</a>)
+                                    return (<a key={movie.id} className="dropdown-item" href={`${this.baseURL}movie/${movie.id}?api_key=${this.apiKey}`}>{movie.title}</a>)
                                 })
                             }
                         </div> 
                     </form>
                 </div>
                 </div>
-
             </div>
-     
              );  
            
           return content;
