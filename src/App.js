@@ -6,11 +6,16 @@ import Description from './components/Description';
 import FilmDetails from './components/FilmDetails';
 
 class App extends Component {
+  
+  onMovieSelect(value){
+    console.log(value)
+  }
+
   render() {
     return (
       <div className="App container-fluid" >
 {/* SEARCHBAR -------------------- */} 
-        <SearchBar/>
+        <SearchBar onSubmit={this.onMovieSelect} />
         <div className ="MovieCard col-12 col-md-12">
           <div className="meta-data-container row col-12 col-md-10 col-lg-9">
 {/* THUMBNAIL ------------------- */}
