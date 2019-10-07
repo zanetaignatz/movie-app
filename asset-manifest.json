@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/movie-app/static/css/main.c56d1b04.chunk.css",
+    "main.js": "/movie-app/static/js/main.34c75230.chunk.js",
+    "main.js.map": "/movie-app/static/js/main.34c75230.chunk.js.map",
+    "runtime-main.js": "/movie-app/static/js/runtime-main.06a39056.js",
+    "runtime-main.js.map": "/movie-app/static/js/runtime-main.06a39056.js.map",
+    "static/js/2.d347e66a.chunk.js": "/movie-app/static/js/2.d347e66a.chunk.js",
+    "static/js/2.d347e66a.chunk.js.map": "/movie-app/static/js/2.d347e66a.chunk.js.map",
+    "index.html": "/movie-app/index.html",
+    "precache-manifest.a8ca4f838615c2942235e6a7abe32dfb.js": "/movie-app/precache-manifest.a8ca4f838615c2942235e6a7abe32dfb.js",
+    "service-worker.js": "/movie-app/service-worker.js",
+    "static/css/main.c56d1b04.chunk.css.map": "/movie-app/static/css/main.c56d1b04.chunk.css.map",
+    "static/media/App.css": "/movie-app/static/media/gplaypattern.5dacd004.png",
+    "static/media/powered-by-blue.svg": "/movie-app/static/media/powered-by-blue.c74849c0.svg"
+  }
+}
