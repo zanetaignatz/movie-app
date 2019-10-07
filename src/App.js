@@ -13,6 +13,7 @@ class App extends Component {
 
   onMovieSelect = (value) => {
     console.log(value);
+    
     this.setState({
       selectedMovie: value
     });
@@ -23,20 +24,20 @@ class App extends Component {
       <div className="App container-fluid" >
 {/* SEARCHBAR -------------------- */} 
         <SearchBar 
-          onSubmit={this.onMovieSelect} 
+          onSelected={this.onMovieSelect} 
  
           />
         <div className ="MovieCard col-12 col-md-12">
           <div className="meta-data-container row col-12 col-md-10 col-lg-9">
 {/* THUMBNAIL ------------------- */}
-            <Thumbnail/>
+            <Thumbnail movie={this.state.selectedMovie}/>
             <div className="info-container col">
 {/* DESCRIPTION ------------------- */}
             <Description 
             movie={this.state.selectedMovie} 
             />
 {/* FILM DETAILS ------------------- */}
-              <FilmDetails />
+              <FilmDetails movie={this.state.selectedMovie}/>
             </div>
           </div>   
         </div>

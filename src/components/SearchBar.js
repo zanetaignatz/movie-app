@@ -16,6 +16,7 @@ class SearchBar extends React.Component {
         };
         //this.movies = [];
         this.handleChange = this.handleChange.bind(this);
+        this.onMovieSelected = this.onMovieSelected.bind(this);
     }
 
     handleChange(e){
@@ -39,16 +40,25 @@ class SearchBar extends React.Component {
         );
         // MG //
         console.log(loadedMovies);
-        console.log(loadedMovies[0].title);
         console.log(this.state.movies);
 
         //this.state.movies = movies;
     }
 
-   onFormSubmit = (event) => {
-       event.preventDefault();
-       //console.log(this.state.value);
-       this.props.onSubmit(this.state.value);
+//    onFormSubmit = (event) => {
+//        event.preventDefault();
+//        //console.log(this.state.value);
+//        this.props.onSubmit(this.state.value);
+//    }
+
+    onMovieSelected(e){
+        this.setState({
+            movies: [],
+        },async callback => {
+            let details = await this.api.getMovie(e.id);
+            this.props.onSelected(details);
+        });
+   
    }
 
     componentDidMount(){
@@ -77,23 +87,23 @@ class SearchBar extends React.Component {
                 </div>
                 <div className="input-container col-10 col-sm-8 col-md-5 col-lg-6 mx-auto pt-md-4 align-items-center">
                 <div className="dropdown active-green-3 active-green-4 mb-4 col-md-10 col-lg-7">               
-                    <form onSubmit={this.onFormSubmit}>
+                    
                         <input id="dropdownMenuInput" className="form-control dropdown-toggle" type="text"
                         placeholder="Search..." aria-label="Search" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="true"
                         value={this.state.value}
                         ref={input => this.search = input} 
                         onChange={this.handleChange}
-                        onSubmit={this.onFormSubmit}
+                    
                         />
                         <div className={this.state.dropdownStyle}
                         aria-labelledby="dropdownMenuInput">
                             {this.state.movies.map(movie => {
-                                    return (<a key={movie.id} className="dropdown-item" href={`${this.baseURL}movie/${movie.id}?api_key=${this.apiKey}`}>{movie.title}</a>)
+                                    return (<a key={movie.id} id={movie.id} onClick={()=>{this.onMovieSelected(movie)}} className="dropdown-item" href="#">{movie.title}</a>)
                                 })
                             }
                         </div> 
-                    </form>
+                   
                 </div>
                 </div>
             </div>
