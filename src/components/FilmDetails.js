@@ -13,7 +13,7 @@ class FilmDetails extends React.Component {
                                 }).join(" ")
                             :""}</span>
                 <div className="row release-details">
-                  <div className="col-6"> Director: <span className="meta-data">Damien Chazelle</span></div>
+                  <div className="col-6"> Budget: <span className="meta-data">{this.props.movie?this.props.movie.budget + " USD" : "?"}</span></div>
                   <div className="col-6"> Vote Average: <span className="meta-data">{this.props.movie?this.props.movie.vote_average : "?"}</span></div>
                 </div>
                 <div className="row release-details">  
