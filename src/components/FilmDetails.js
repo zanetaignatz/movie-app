@@ -4,6 +4,8 @@ class FilmDetails extends React.Component {
 
     render () {
 
+      let data = this.props.data;
+
     return (
         <div className="additional-details">
 

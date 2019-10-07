@@ -128,3 +128,12 @@ p{
 .additional-details{
     margin: 15px 0 15px 0;
 }
+
+.scrollable-dropdown {
+    height: auto;
+    max-height: 200px;
+    overflow-y: scroll;
+    transform: none !important;
+    top: 38px !important;  
+    left: 15px !important;
+}

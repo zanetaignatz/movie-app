@@ -5,7 +5,7 @@ import Thumbnail from './components/Thumbnail';
 import Description from './components/Description';
 import FilmDetails from './components/FilmDetails';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="App container-fluid" >
@@ -28,4 +28,3 @@ class App extends Component {
   }
 }
 export default App;
-
