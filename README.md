@@ -9,6 +9,9 @@ All the information you need in one place.
 This fully responsive application was created for the CodersCamp course by BestTeamEver. 
 It was build with create-react-app and it is powered by The Movie Database API.
 
+## Live preview:
+[Have a look!](https://zanetaignatz.github.io/movie-app/)
+
 ## Technologies:
 * HTML
 * CSS
